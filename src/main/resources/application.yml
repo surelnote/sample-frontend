@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  #servlet:
+    #context-path: /frontend
+
+---
+  
+spring:
+  profiles: default
+  
+  mvc: 
+    view: 
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+      static-path-pattern: /resources/**
+
+---
+spring:
+  profiles: docker
+  sleuth:
+    sampler:
+      probability: 1
+    web:
+      skipPattern: (^cleanup.*|.+favicon.*)
+
+---
+spring:
+  profiles: test
+  
