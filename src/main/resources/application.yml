@@ -17,11 +17,12 @@ spring:
 ---
 spring:
   profiles: docker
-  sleuth:
-    sampler:
-      probability: 1
-    web:
-      skipPattern: (^cleanup.*|.+favicon.*)
+  
+  mvc: 
+    view: 
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+      static-path-pattern: /resources/**
 
 ---
 spring:
