@@ -114,7 +114,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
-				<form action="/fulfilment/mvc/auth/1" method="post">
+				<form action="" method="post">
 					<div class="form-group">
 						<input type="text" class="form-control" name="username" placeholder="Username" required="required">		
 					</div>
@@ -122,7 +122,7 @@
 						<input type="password" class="form-control" name="password" placeholder="Password" required="required">	
 					</div>        
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+						<input type="button" class="btn btn-primary btn-lg btn-block login-btn" id="backendcall" value="BackEnd Call" /> 
 					</div>
 				</form>
 			</div>
@@ -133,4 +133,23 @@
 	</div>
 </div>     
 </body>
+<script type="text/javascript">
+
+	$(function(){ 
+		$("#backendcall").click(
+			function(){ 
+				$.ajax({ 
+					type: 'get', 
+					url: '/fulfilment/mvc/auth/1' , 
+					dataType : 'json' , 
+					success: function(xhr, data) {
+						console.log(xhr);
+						alert(data.userId)
+					} 
+				}); 
+			}) 
+		})
+		
+</script>
+
 </html>                            
