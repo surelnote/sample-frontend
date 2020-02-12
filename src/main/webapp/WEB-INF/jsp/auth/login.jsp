@@ -142,7 +142,7 @@
 					type: 'get', 
 					url: '/fulfilment/mvc/auth/1' , 
 					dataType : 'json' , 
-					success: function(xhr, data) {
+					success: function(data, status, xhr) {
 						console.log(xhr);
 						alert(data.userId)
 					} 
