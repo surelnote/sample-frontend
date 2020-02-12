@@ -114,7 +114,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
-				<form action="/examples/actions/confirmation.php" method="post">
+				<form action="/fulfilment/mvc/auth/1" method="post">
 					<div class="form-group">
 						<input type="text" class="form-control" name="username" placeholder="Username" required="required">		
 					</div>
