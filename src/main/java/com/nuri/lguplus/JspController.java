@@ -32,4 +32,9 @@ public class JspController {
         return "main";
     }
     
+    @RequestMapping("/login")
+    public String login() throws Exception {
+        return "auth/login";
+    }
+    
 }
