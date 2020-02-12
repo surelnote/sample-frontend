@@ -144,7 +144,8 @@
 					dataType : 'json' , 
 					success: function(data, status, xhr) {
 						console.log(xhr);
-						alert(data.userId)
+						alert(xhr.getResponseHeader('Authorization'));
+						alert(data.userId);
 					} 
 				}); 
 			}) 
