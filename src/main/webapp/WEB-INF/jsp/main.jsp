@@ -20,7 +20,7 @@
 <body>
  
 <div id="accordion">
-  <h3>Section 1</h3>
+  <h3>TEST1 </h3>
   <div>
     <p>
     Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
