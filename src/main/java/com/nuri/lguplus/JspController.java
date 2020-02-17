@@ -1,6 +1,7 @@
 package com.nuri.lguplus;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
  
@@ -36,5 +37,9 @@ public class JspController {
     public String login() throws Exception {
         return "auth/login";
     }
-    
+
+    @RequestMapping("/{path}")
+    public String test(@PathVariable String path) throws Exception {
+        return path;
+    }
 }

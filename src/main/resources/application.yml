@@ -32,4 +32,11 @@ spring:
 ---
 spring:
   profiles: test
-  
+
+# jsp 적용 
+---
+server:
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
